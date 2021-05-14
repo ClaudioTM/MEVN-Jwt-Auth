@@ -1,4 +1,4 @@
-# Node.js MongoDB – User Authentication & Authorization example with JWT & Mongoose
+# Node.js MongoDB – User Authentication & Authorization with JWT & Mongoose
 
 ## Project setup
 ```
