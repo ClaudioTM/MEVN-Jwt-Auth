@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
+const foodItemRoutes = require("./app/routes/foodItems");
 
 const app = express();
 
@@ -42,6 +43,8 @@ app.get("/", (req, res) => {
 // routes
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
+
+app.use("/api/foodItems", foodItemRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

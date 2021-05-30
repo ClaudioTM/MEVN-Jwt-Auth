@@ -50,6 +50,14 @@
               class="alert-danger"
             >{{errors.first('password')}}</div>
           </div>
+          <div class="form-group form-check">
+                <input type="checkbox" v-model="user.charity" id="charity" class="form-check-input">
+                <label class="form-check-label" for="charity">Charity Member</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" v-model="user.beneficiary" id="beneficiary" class="form-check-input">
+                <label class="form-check-label" for="beneficiary">Beneficiary</label>
+            </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block">Sign Up</button>
           </div>
@@ -75,7 +83,9 @@ export default {
       user: new User('', '', ''),
       submitted: false,
       successful: false,
-      message: ''
+      message: '',
+      charity: false,
+      beneficiary: false
     };
   },
   computed: {

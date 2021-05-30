@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 import Register from './views/Register.vue';
+//import FoodItems from './views/FoodItems.vue';
 
 Vue.use(Router);
 
@@ -49,6 +50,12 @@ export const router = new Router({
       name: 'user',
       // lazy-loaded
       component: () => import('./views/BoardUser.vue')
+    },
+    {
+      path: '/fooditems',
+      name: 'fooditems',
+      // lazy-loaded
+      component: () => import('./views/FoodItems.vue')
     }
   ]
 });
